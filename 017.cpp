@@ -18,6 +18,9 @@ class Array2 {
 			}
 		}
 		~Array2() {
+			for (int i = 0; i < x; i++) {
+				delete [] ptr[i];
+			}
                         delete [] ptr;	
 		}
 		int* operator[](int i) {
